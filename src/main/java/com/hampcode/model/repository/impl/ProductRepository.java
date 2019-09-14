@@ -1,5 +1,6 @@
 package com.hampcode.model.repository.impl;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +14,12 @@ import com.hampcode.model.entity.Product;
 import com.hampcode.model.repository.IProductRepository;
 
 @Named
-public class ProductRepository implements IProductRepository {
+public class ProductRepository implements IProductRepository,Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@PersistenceContext(unitName = "tallerPU")
 	private EntityManager em;
 
